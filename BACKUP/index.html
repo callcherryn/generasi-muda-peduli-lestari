@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="gw.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generasi Muda Peduli Lestari</title>
+    <meta name="description" content="Kampanye generasi muda tentang pencegahan global warming">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#31694E',
+                        secondary: '#658C58',
+                        accent: '#F0E491'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .carousel {
+            scroll-snap-type: x mandatory;
+        }
+        .carousel-item {
+            scroll-snap-align: start;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out;
+        }
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
+        .typing {
+            overflow: hidden;
+            border-right: 2px solid white;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-[#f5f5f5]">
+    <!-- Navigation Bar - Horizontal untuk Desktop, Hamburger untuk Mobile -->
+    <header class="bg-[#31694E] shadow-md sticky top-0 z-50" id="top">
+        <div class="container mx-auto px-4 py-3">
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex justify-between items-center">
+                <h1 class="text-white text-xl font-bold">Eco Dashboard</h1>
+                <nav>
+                    <ul class="flex space-x-8">
+                        <li><a href="index.html" class="text-white hover:text-accent transition duration-300 font-medium">Home</a></li>
+                        <li><a href="about.html" class="text-white hover:text-accent transition duration-300 font-medium">About</a></li>
+                        <li><a href="#artikel" class="text-white hover:text-accent transition duration-300 font-medium">Artikel</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="md:hidden flex justify-between items-center">
+                <h1 class="text-white text-xl font-bold">Eco Dashboard</h1>
+                <button id="menu-toggle" class="text-white focus:outline-none hover:animate-pulse transition">
+                    <div class="w-6 flex flex-col space-y-1">
+                        <div class="h-0.5 w-full bg-white rounded"></div>
+                        <div class="h-0.5 w-full bg-white rounded"></div>
+                        <div class="h-0.5 w-full bg-white rounded"></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="menu" class="hidden md:hidden bg-[#5B7917] w-full z-20 shadow-lg">
+            <nav class="container mx-auto px-4 py-2">
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="block text-white hover:bg-[#4a6615] px-2 py-1 rounded">Home</a></li>
+                    <li><a href="about.html" class="block text-white hover:bg-[#4a6615] px-2 py-1 rounded">About</a></li>
+                    <li><a href="#artikel" class="block text-white hover:bg-[#4a6615] px-2 py-1 rounded">Artikel</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="menu-backdrop" class="hidden fixed inset-0 bg-black bg-opacity-50 z-10"></div>
+    </header>
+
+    <!-- Hero Section dengan gambar full width -->
+    <section class="relative w-full h-screen overflow-hidden">
+        <!-- Background image full screen tanpa padding -->
+        <div class="absolute inset-0 w-full h-full">
+            <img src="./assets/header.png" 
+                 alt="Earth from space" 
+                 class="w-full h-full object-cover">
+            <!-- Overlay untuk keterbacaan teks -->
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        
+        <!-- Konten di tengah -->
+        <div class="relative z-10 h-full flex items-center justify-center">
+            <div class="text-center px-4 max-w-4xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white fade-in-up">Generasi Muda Peduli Lestari</h1>
+                <p class="text-xl md:text-2xl mb-8 text-white fade-in-up" style="animation-delay: 0.2s;">Bersama kita bisa mencegah global warming dan menjaga bumi untuk masa depan</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+         <!-- Facts Section -->
+    <section class="py-16 bg-accent">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">FAKTA MENGGEMPARKAN</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <div class="text-5xl text-primary mb-4">
+                        <i class="fas fa-temperature-high"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">1.5°C</h3>
+                    <p class="text-gray-600">Kenaikan suhu global sejak era pra-industri yang harus kita cegah mencapai 2°C</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <div class="text-5xl text-primary mb-4">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">15 Miliar</h3>
+                    <p class="text-gray-600">Pohon hilang setiap tahunnya akibat deforestasi dan kebakaran hutan</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <div class="text-5xl text-primary mb-4">
+                        <i class="fas fa-trash"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">8 Juta Ton</h3>
+                    <p class="text-gray-600">Sampah plastik masuk ke laut setiap tahun mengancam ekosistem</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Aksi Section -->
+        <section id="aksi" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-primary">Aksi yang Bisa Kamu Lakukan</h2>
+                
+                <div class="relative">
+                    <div class="carousel flex overflow-x-auto scroll-smooth space-x-4" style="-webkit-overflow-scrolling: touch;">
+                        <div class="carousel-item flex-shrink-0 w-4/5 md:w-1/3 bg-secondary rounded-xl p-6 text-white">
+                            <div class="h-48 mb-4 rounded-lg overflow-hidden">
+                                <img src="https://picsum.photos/500/300?random=2" alt="Bersepeda" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Gunakan Sepeda</h3>
+                            <p>Mengurangi penggunaan kendaraan bermotor dapat menurunkan emisi karbon secara signifikan.</p>
+                        </div>
+                        <div class="carousel-item flex-shrink-0 w-4/5 md:w-1/3 bg-primary rounded-xl p-6 text-white">
+                            <div class="h-48 mb-4 rounded-lg overflow-hidden">
+                                <img src="https://picsum.photos/500/300?random=3" alt="Menanam pohon" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Tanam Pohon</h3>
+                            <p>Setiap pohon dapat menyerap 48 pon CO2 per tahun dan menghasilkan udara bersih.</p>
+                        </div>
+                        <div class="carousel-item flex-shrink-0 w-4/5 md:w-1/3 bg-accent rounded-xl p-6 text-primary">
+                            <div class="h-48 mb-4 rounded-lg overflow-hidden">
+                                <img src="https://picsum.photos/500/300?random=4" alt="Kurangi plastik" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Kurangi Plastik</h3>
+                            <p>Plastik membutuhkan 1000 tahun untuk terurai dan menghasilkan gas berbahaya saat dibakar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dampak Section -->
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-primary">Dampak Nyata dari Aksi Kita</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-5xl font-bold text-secondary mb-4">250+</div>
+                        <h3 class="text-xl font-semibold mb-2">Komunitas Aktif</h3>
+                        <p>Generasi muda seluruh Indonesia telah bergabung dalam aksi peduli lingkungan.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-5xl font-bold text-primary mb-4">10,000+</div>
+                        <h3 class="text-xl font-semibold mb-2">Pohon Teranam</h3>
+                        <p>Dalam 2 tahun terakhir, komunitas kita berhasil menanam ribuan pohon.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-5xl font-bold text-accent mb-4">50%</div>
+                        <h3 class="text-xl font-semibold mb-2">Sampah Dikurangi</h3>
+                        <p>Kampanye zero waste telah mengurangi sampah hingga 50% di komunitas kami.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-primary">Visualisasi Dampak Aksimu</h2>
+                
+                <div class="bg-gradient-to-b from-blue-300 to-green-200 rounded-2xl p-8 shadow-xl max-w-3xl mx-auto">
+                    <div class="bg-white/70 rounded-xl p-6 mb-6 min-h-[300px] relative overflow-hidden">
+                        <!-- Sky -->
+                        <div class="absolute top-0 left-0 right-0 h-2/3 bg-gradient-to-b from-blue-400 to-blue-200"></div>
+                        
+                        <!-- Sun -->
+                        <div id="sun" class="absolute top-8 right-8 w-16 h-16 rounded-full bg-yellow-400 shadow-lg transition-all duration-500"></div>
+                        
+                        <!-- Ground -->
+                        <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-b from-green-600 to-green-800"></div>
+                        
+                        <!-- Trees container -->
+                        <div id="trees-container" class="absolute bottom-24 left-0 right-0 flex justify-center space-x-4 transition-all duration-500"></div>
+                        
+                        <!-- Water level -->
+                        <div id="water-level" class="absolute bottom-0 left-0 right-0 bg-blue-500/70 h-6 transition-all duration-500"></div>
+                    </div>
+                    
+                    <!-- Controls -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-primary font-semibold mb-2">🚴 Seberapa sering kamu bersepeda/jalan kaki daripada naik motor?</label>
+                            <input type="range" id="biking-slider" min="0" max="100" value="50" class="w-full">
+                            <div class="flex justify-between text-sm text-gray-600 mt-1">
+                                <span>Jarang</span>
+                                <span>Sering</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-primary font-semibold mb-2">🌳 Berapa banyak kamu terlibat dalam penanaman pohon?</label>
+                            <input type="range" id="trees-slider" min="0" max="100" value="60" class="w-full">
+                            <div class="flex justify-between text-sm text-gray-600 mt-1">
+                                <span>Tidak pernah</span>
+                                <span>Sangat aktif</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-primary font-semibold mb-2">🗑️ Seberapa banyak plastik sekali pakai yang kamu gunakan?</label>
+                            <input type="range" id="plastic-slider" min="0" max="100" value="30" class="w-full">
+                            <div class="flex justify-between text-sm text-gray-600 mt-1">
+                                <span>Sangat sedikit</span>
+                                <span>Banyak</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artikel Section -->
+        <section id="artikel" class="py-16 bg-accent">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-primary">Artikel & Informasi</h2>
+                
+                <div class="relative">
+                    <button class="artikel-prev absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-secondary transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button class="artikel-next absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-secondary transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                    
+                    <div class="carousel-artikel flex overflow-x-auto scroll-smooth space-x-4 px-12" style="-webkit-overflow-scrolling: touch;">
+                        <div class="carousel-item-artikel flex-shrink-0 w-4/5 md:w-1/3 bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+                            <img src="https://picsum.photos/400/250?random=5" alt="Artikel 1" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2 text-primary">Dampak Pemanasan Global terhadap Ekosistem Laut</h3>
+                                <p class="text-gray-600 mb-4">Perubahan iklim mengancam kehidupan biota laut dan ekosistem terumbu karang...</p>
+                                <a href="#" class="text-secondary font-semibold hover:text-primary transition">Baca selengkapnya →</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item-artikel flex-shrink-0 w-4/5 md:w-1/3 bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+                            <img src="https://picsum.photos/400/250?random=6" alt="Artikel 2" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2 text-primary">5 Cara Mudah Kurangi Jejak Karbon</h3>
+                                <p class="text-gray-600 mb-4">Langkah sederhana yang bisa dilakukan sehari-hari untuk membantu bumi...</p>
+                                <a href="#" class="text-secondary font-semibold hover:text-primary transition">Baca selengkapnya →</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item-artikel flex-shrink-0 w-4/5 md:w-1/3 bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+                            <img src="https://picsum.photos/400/250?random=7" alt="Artikel 3" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2 text-primary">Energi Terbarukan: Masa Depan yang Berkelanjutan</h3>
+                                <p class="text-gray-600 mb-4">Teknologi hijau yang mengubah cara kita menggunakan energi...</p>
+                                <a href="#" class="text-secondary font-semibold hover:text-primary transition">Baca selengkapnya →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-primary text-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold mb-4">Bergabunglah dalam Gerakan Kami</h2>
+                    <p class="text-xl mb-8">Daftar untuk mendapatkan tips, informasi kegiatan, dan cara berkontribusi dalam mencegah global warming</p>
+                    <form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+                        <input type="email" placeholder="Email kamu" class="flex-grow px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button type="submit" class="bg-accent text-primary px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition">Gabung Sekarang</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Generasi Muda Peduli Lestari</h3>
+                    <p>Komunitas generasi muda peduli lingkungan untuk mencegah global warming dan menjaga kelestarian bumi.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-accent transition">Tentang Kami</a></li>
+                        <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
+                        <li><a href="#artikel" class="hover:text-accent transition">Artikel</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Sosial Media</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:bg-accent transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:bg-accent transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:bg-accent transition"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-accent/30 mt-12 pt-8 text-center">
+                <p>&copy; 2026 Generasi Muda Peduli Lestari. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+           // Menu functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        
+        if(menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                menuBackdrop.classList.toggle('hidden');
+            });
+        }
+        
+        if(menuBackdrop) {
+            menuBackdrop.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                menuBackdrop.classList.add('hidden');
+            });
+        }
+        
+        // Artikel Carousel functionality
+        const artikelCarousel = document.querySelector('.carousel-artikel');
+        const artikelPrevBtn = document.querySelector('.artikel-prev');
+        const artikelNextBtn = document.querySelector('.artikel-next');
+        
+        artikelNextBtn.addEventListener('click', () => {
+            artikelCarousel.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+        
+        artikelPrevBtn.addEventListener('click', () => {
+            artikelCarousel.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        // Interactive sliders
+        const bikingSlider = document.getElementById('biking-slider');
+        const treesSlider = document.getElementById('trees-slider');
+        const plasticSlider = document.getElementById('plastic-slider');
+        const waterLevel = document.getElementById('water-level');
+        const sun = document.getElementById('sun');
+        const treesContainer = document.getElementById('trees-container');
+
+        // Initialize trees
+        function createTrees(count) {
+            treesContainer.innerHTML = '';
+            for (let i = 0; i < count; i++) {
+                const tree = document.createElement('div');
+                tree.className = 'w-8 h-12 bg-green-700 rounded-full relative';
+                tree.innerHTML = '<div class="absolute -top-4 left-0 w-8 h-8 bg-green-500 rounded-full"></div>';
+                treesContainer.appendChild(tree);
+            }
+        }
+
+        function updateVisualization() {
+            // Sun intensity based on biking (less biking = more pollution = hotter sun)
+            const bikingValue = bikingSlider.value;
+            const sunIntensity = 100 - bikingValue;
+            sun.style.backgroundColor = `hsl(50, 100%, ${50 + sunIntensity/2}%)`;
+            
+            // Water level based on plastic usage (more plastic = higher water level)
+            const plasticValue = plasticSlider.value;
+            const waterHeight = 24 + (plasticValue / 5);
+            waterLevel.style.height = `${waterHeight}px`;
+            
+            // Trees based on trees planted
+            const treesValue = treesSlider.value;
+            const treeCount = Math.floor(treesValue / 20);
+            createTrees(treeCount);
+            
+            // Change tree appearance based on overall score
+            const overallScore = (parseInt(bikingValue) + parseInt(treesValue) + (100 - parseInt(plasticValue))) / 3;
+            if (overallScore < 30) {
+                treesContainer.querySelectorAll('div').forEach(tree => {
+                    tree.style.backgroundColor = '#7a5c07';
+                    tree.children[0].style.backgroundColor = '#a67c00';
+                });
+            }
+        }
+
+        // Initial setup
+        createTrees(3);
+        
+        // Event listeners for sliders
+        bikingSlider.addEventListener('input', updateVisualization);
+        treesSlider.addEventListener('input', updateVisualization);
+        plasticSlider.addEventListener('input', updateVisualization);
+        
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+        // Observe sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+        // Stagger animation for cards
+        document.querySelectorAll('.grid.grid-cols-1.md\\:grid-cols-3 .bg-white, .carousel-item-artikel').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
+            observer.observe(card);
+        });
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</body>
+</html>
