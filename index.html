@@ -1,499 +1,523 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <link rel="stylesheet" href="gw.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generasi Muda Peduli Lestari</title>
-    <meta name="description" content="Kampanye generasi muda tentang pencegahan global warming">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#31694E',
-                        secondary: '#658C58',
-                        accent: '#F0E491'
-                    },
-                    fontFamily: {
-                        poppins: ['Poppins', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .carousel {
-            scroll-snap-type: x mandatory;
-        }
-        .carousel-item {
-            scroll-snap-align: start;
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
-        }
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        .slide-in-left {
-            animation: slideInLeft 0.8s ease-out;
-        }
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        .slide-in-right {
-            animation: slideInRight 0.8s ease-out;
-        }
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: white; }
-        }
-        .typing {
-            overflow: hidden;
-            border-right: 2px solid white;
-            white-space: nowrap;
-            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Komunitas generasi muda Indonesia berkomitmen mencegah perubahan iklim melalui aksi nyata: penanaman pohon, pengurangan emisi, dan kampanye zero waste. Bergabung dengan 10,000+ pemuda peduli lingkungan.">
+<meta name="keywords" content="lingkungan hidup, generasi muda, perubahan iklim, sustainability, Indonesia">
+<meta property="og:title" content="Generasi Lestari - Aksi Nyata untuk Bumi Berkelanjutan">
+<meta property="og:description" content="Bergabung dengan 10,000+ pemuda Indonesia dalam gerakan nyata melawan perubahan iklim">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://generasi-muda-peduli-lestari.vercel.app/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌍</text></svg>">
+<title>Generasi Lestari - Aksi Nyata Generasi Muda untuk Bumi Berkelanjutan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700;900&family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+<style>
+:root{
+--earth-deep:#1a3a2e;
+--earth-forest:#2d5f4d;
+--earth-moss:#4a7c59;
+--earth-sage:#7aa874;
+--earth-spring:#b8d8a8;
+--earth-cream:#f4f1e8;
+--ocean-dark:#0d3b52;
+--ocean-bright:#2b8ab8;
+--sunset-rust:#d97642;
+--sunset-coral:#f2a365;
+--sunset-gold:#f4c430;
+--cloud-white:#fff;
+--font-display:'Playfair Display',serif;
+--font-heading:'Crimson Pro',serif;
+--font-body:'DM Sans',sans-serif;
+--space-xs:.5rem;
+--space-sm:.75rem;
+--space-md:1rem;
+--space-lg:1.5rem;
+--space-xl:2.5rem;
+--space-2xl:4rem;
+--space-3xl:6.5rem;
+--container-max:1280px;
+--radius-sm:8px;
+--radius-md:16px;
+--radius-lg:24px;
+--radius-xl:32px;
+--shadow-sm:0 2px 8px rgba(26,58,46,.08);
+--shadow-md:0 4px 16px rgba(26,58,46,.12);
+--shadow-lg:0 8px 32px rgba(26,58,46,.16);
+--shadow-xl:0 16px 48px rgba(26,58,46,.2)
+}
+*,::after,::before{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);line-height:1.7;color:var(--earth-deep);background:var(--earth-cream);overflow-x:hidden}
+h1,h2,h3{font-family:var(--font-heading);font-weight:700;line-height:1.2;margin-bottom:var(--space-md)}
+h1{font-size:clamp(2.5rem,6vw,5rem);font-weight:900;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,4vw,3.5rem)}
+h3{font-size:clamp(1.5rem,3vw,2.25rem)}
+p{margin-bottom:var(--space-md)}
+a{color:var(--ocean-bright);text-decoration:none;transition:color .3s}
+a:hover{color:var(--ocean-dark)}
+img{max-width:100%;display:block}
+.skip-link{position:absolute;top:-100px;left:0;background:var(--earth-deep);color:var(--cloud-white);padding:var(--space-md);z-index:100;border-radius:0 0 var(--radius-md) 0}
+.skip-link:focus{top:0;outline:3px solid var(--sunset-gold)}
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(244,241,232,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(26,58,46,.1);transition:all .3s}
+.header.scrolled{box-shadow:var(--shadow-md)}
+.header-container{max-width:var(--container-max);margin:0 auto;padding:var(--space-md) clamp(1.5rem,5vw,3rem);display:flex;justify-content:space-between;align-items:center;gap:var(--space-xl)}
+.logo{display:flex;align-items:center;gap:var(--space-sm);font-family:var(--font-display);font-size:1.5rem;font-weight:900;color:var(--earth-deep)}
+.logo:hover{transform:translateY(-2px)}
+.logo-icon{font-size:2rem;animation:rotate 30s linear infinite}
+@keyframes rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.nav{display:flex;align-items:center;gap:var(--space-xl)}
+.nav-list{display:flex;list-style:none;gap:var(--space-lg)}
+.nav-link{position:relative;font-weight:500;color:var(--earth-deep);padding:var(--space-xs) var(--space-sm);transition:color .3s}
+.nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(135deg,var(--earth-deep) 0%,var(--earth-forest) 100%);transition:width .3s}
+.nav-link:hover::after{width:100%}
+.btn{padding:var(--space-sm) var(--space-lg);border-radius:var(--radius-lg);font-weight:600;border:none;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block}
+.btn-primary{background:linear-gradient(135deg,var(--earth-deep),var(--earth-forest));color:var(--cloud-white);box-shadow:var(--shadow-sm)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn-secondary{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);color:var(--cloud-white);border:2px solid rgba(255,255,255,.3)}
+.btn-secondary:hover{background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.6)}
+.btn-cta{background:linear-gradient(135deg,var(--sunset-rust),var(--sunset-coral),var(--sunset-gold));color:var(--earth-deep)}
+.mobile-toggle{display:none;background:0 0;border:none;font-size:1.5rem;cursor:pointer}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding-top:var(--space-3xl)}
+.hero-bg{position:absolute;inset:0;z-index:-1}
+.hero-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,58,46,.95) 0%,rgba(26,58,46,.7) 100%);z-index:1}
+.hero-img{width:100%;height:100%;object-fit:cover;animation:zoom 30s ease-in-out infinite alternate}
+@keyframes zoom{from{transform:scale(1)}to{transform:scale(1.1)}}
+.hero-content{position:relative;z-index:2;max-width:var(--container-max);margin:0 auto;padding:var(--space-2xl) clamp(1.5rem,5vw,3rem);text-align:center;color:var(--cloud-white)}
+.hero-title{font-family:var(--font-display);font-size:clamp(3rem,8vw,6rem);line-height:1.1;margin-bottom:var(--space-lg);text-shadow:0 4px 24px rgba(0,0,0,.3);animation:fadeUp 1s ease backwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.hero-subtitle{font-size:clamp(1.125rem,2vw,1.5rem);margin-bottom:var(--space-2xl);max-width:800px;margin-left:auto;margin-right:auto;text-shadow:0 2px 12px rgba(0,0,0,.2);animation:fadeUp 1s .2s ease backwards}
+.hero-cta{display:flex;gap:var(--space-md);justify-content:center;flex-wrap:wrap;animation:fadeUp 1s .4s ease backwards}
+.scroll-indicator{position:absolute;bottom:var(--space-xl);left:50%;transform:translateX(-50%);animation:bounce 2s infinite}
+@keyframes bounce{0%,100%,20%,50%,80%{transform:translateX(-50%) translateY(0)}40%{transform:translateX(-50%) translateY(-10px)}60%{transform:translateX(-50%) translateY(-5px)}}
+.scroll-indicator span{display:block;width:30px;height:50px;border:2px solid rgba(255,255,255,.6);border-radius:25px;position:relative}
+.scroll-indicator span::before{content:'';position:absolute;top:8px;left:50%;width:6px;height:6px;margin-left:-3px;background:var(--cloud-white);border-radius:50%;animation:scrollWheel 2s infinite}
+@keyframes scrollWheel{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(20px)}}
+.section{padding:var(--space-3xl) clamp(1.5rem,5vw,3rem)}
+.section-white{background:var(--cloud-white)}
+.section-cream{background:var(--earth-cream)}
+.section-dark{background:linear-gradient(135deg,var(--earth-deep),var(--earth-forest));color:var(--cloud-white)}
+.container{max-width:var(--container-max);margin:0 auto}
+.section-header{text-align:center;margin-bottom:var(--space-3xl)}
+.section-label{display:inline-block;font-size:.875rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ocean-bright);margin-bottom:var(--space-md);padding:var(--space-xs) var(--space-md);background:rgba(43,138,184,.1);border-radius:var(--radius-sm)}
+.section-title{color:var(--earth-deep);max-width:800px;margin-left:auto;margin-right:auto}
+.section-dark .section-title{color:var(--cloud-white)}
+.section-description{font-size:1.125rem;color:var(--earth-forest);max-width:700px;margin:0 auto}
+.grid{display:grid;gap:var(--space-xl)}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--cloud-white);border-radius:var(--radius-xl);padding:var(--space-xl);transition:all .3s;box-shadow:var(--shadow-md)}
+.card:hover{transform:translateY(-8px);box-shadow:var(--shadow-xl)}
+.card-gradient{background:linear-gradient(135deg,var(--earth-deep),var(--earth-forest));color:var(--cloud-white);position:relative;overflow:hidden}
+.card-gradient::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.1),transparent 70%);transform:translate(30%,-30%)}
+.card-gradient:nth-child(2){background:linear-gradient(135deg,var(--ocean-dark),var(--ocean-bright))}
+.card-gradient:nth-child(3){background:linear-gradient(135deg,var(--sunset-rust),var(--sunset-coral))}
+.icon-large{font-size:3rem;margin-bottom:var(--space-md);animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.stat-number{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);font-weight:900;line-height:1;margin-bottom:var(--space-sm)}
+.stat-label{font-size:1.125rem;font-weight:600;margin-bottom:var(--space-sm)}
+.stat-source{margin-top:var(--space-md);padding-top:var(--space-md);border-top:1px solid rgba(255,255,255,.2);font-size:.8125rem;opacity:.8}
+.action-card{display:flex;flex-direction:column;height:100%}
+.action-img-wrap{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--earth-spring)}
+.action-img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .action-img{transform:scale(1.1)}
+.action-badge{position:absolute;top:var(--space-md);left:var(--space-md);background:rgba(255,255,255,.95);padding:var(--space-xs) var(--space-md);border-radius:var(--radius-lg);font-size:.8125rem;font-weight:700}
+.action-content{padding:var(--space-xl);flex-grow:1;display:flex;flex-direction:column}
+.action-list{list-style:none;margin:var(--space-lg) 0}
+.action-list li{position:relative;padding-left:var(--space-xl);margin-bottom:var(--space-sm);color:var(--earth-forest)}
+.action-list li::before{content:'✓';position:absolute;left:0;color:var(--earth-sage);font-weight:700;font-size:1.25rem}
+.calc-form{background:rgba(255,255,255,.05);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-xl);padding:var(--space-2xl)}
+.form-group{margin-bottom:var(--space-xl)}
+.form-label{display:block;font-weight:600;margin-bottom:var(--space-md);font-size:1.125rem}
+.slider{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:4px;background:rgba(255,255,255,.2);outline:0;cursor:pointer}
+.slider::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--sunset-gold);cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.3);transition:transform .3s}
+.slider::-webkit-slider-thumb:hover{transform:scale(1.2)}
+.slider::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--sunset-gold);cursor:pointer;border:none;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.slider-labels{display:flex;justify-content:space-between;margin-top:var(--space-sm);font-size:.875rem;opacity:.8}
+.slider-value{text-align:center;margin-top:var(--space-md);font-size:1.25rem;font-weight:700;color:var(--sunset-gold)}
+.results{margin-top:var(--space-2xl);padding:var(--space-xl);background:rgba(255,255,255,.1);border-radius:var(--radius-lg);border:2px solid rgba(255,255,255,.2)}
+.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-lg);margin-bottom:var(--space-xl)}
+.result-item{text-align:center}
+.result-value{display:block;font-size:2rem;font-weight:900;color:var(--sunset-gold);margin:var(--space-sm) 0}
+.achievement-icon{width:80px;height:80px;margin:0 auto var(--space-lg);background:linear-gradient(135deg,var(--earth-deep),var(--earth-forest));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.5rem;box-shadow:var(--shadow-md)}
+.article-meta{display:flex;align-items:center;gap:var(--space-md);font-size:.875rem;color:var(--earth-moss);margin-bottom:var(--space-md)}
+.join-form{display:flex;gap:var(--space-md);max-width:600px;margin:0 auto var(--space-lg);flex-wrap:wrap;justify-content:center}
+.join-input{flex:1;min-width:250px;padding:var(--space-md) var(--space-lg);border:2px solid rgba(255,255,255,.3);border-radius:var(--radius-lg);background:rgba(255,255,255,.1);color:var(--cloud-white);transition:all .3s}
+.join-input::placeholder{color:rgba(255,255,255,.6)}
+.join-input:focus{outline:0;border-color:var(--sunset-gold);background:rgba(255,255,255,.15);box-shadow:0 0 0 4px rgba(244,196,48,.2)}
+.join-message{margin-top:var(--space-md);padding:var(--space-md);border-radius:var(--radius-md);font-weight:600}
+.join-success{background:rgba(122,168,116,.2);border:1px solid rgba(122,168,116,.4)}
+.join-error{background:rgba(217,118,66,.2);border:1px solid rgba(217,118,66,.4)}
+.footer{background:var(--earth-deep);color:var(--earth-cream);padding:var(--space-3xl) clamp(1.5rem,5vw,3rem) var(--space-xl)}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--space-2xl);padding-bottom:var(--space-2xl);border-bottom:1px solid rgba(244,241,232,.1)}
+.footer-brand{max-width:350px}
+.footer-logo{font-family:var(--font-display);font-size:1.5rem;font-weight:900;color:var(--earth-cream);margin-bottom:var(--space-md)}
+.social-links{display:flex;gap:var(--space-md);margin-top:var(--space-lg)}
+.social-link{display:flex;align-items:center;justify-content:center;width:44px;height:44px;background:rgba(244,241,232,.1);border-radius:50%;font-size:1.25rem;transition:all .3s;color:var(--earth-cream)}
+.social-link:hover{background:var(--earth-sage);transform:translateY(-4px)}
+.footer-nav{list-style:none}
+.footer-nav li{margin-bottom:var(--space-sm)}
+.footer-nav a{color:var(--earth-cream);opacity:.9;transition:all .3s;display:inline-block}
+.footer-nav a:hover{opacity:1;color:var(--earth-sage);transform:translateX(4px)}
+.footer-bottom{margin-top:var(--space-2xl);padding-top:var(--space-xl);display:flex;justify-content:space-between;align-items:center;gap:var(--space-lg);flex-wrap:wrap;font-size:.875rem;opacity:.8}
+.footer-legal{display:flex;gap:var(--space-lg);list-style:none}
+.hidden{display:none}
+@media (max-width:768px){
+.nav{position:fixed;top:73px;left:0;right:0;background:rgba(244,241,232,.98);flex-direction:column;padding:var(--space-xl);box-shadow:var(--shadow-lg);transform:translateY(-100%);opacity:0;visibility:hidden;transition:all .3s}
+.nav.active{transform:translateY(0);opacity:1;visibility:visible}
+.nav-list{flex-direction:column;width:100%;gap:var(--space-md)}
+.nav-link{width:100%;padding:var(--space-md);text-align:center}
+.mobile-toggle{display:block}
+.hero-cta,.join-form{flex-direction:column;align-items:stretch}
+.grid-3{grid-template-columns:1fr}
+.footer-bottom{flex-direction:column;text-align:center}
+.footer-legal{flex-direction:column;gap:var(--space-sm)}
+}
+@media print{
+.header,.scroll-indicator,.btn,.join-form,.footer{display:none}
+body{background:#fff;color:#000}
+}
+</style>
 </head>
-<body class="bg-[#f5f5f5]">
-    <!-- Navigation Bar - Horizontal untuk Desktop, Hamburger untuk Mobile -->
-    <header class="bg-[#31694E] shadow-md sticky top-0 z-50" id="top">
-        <div class="container mx-auto px-4 py-3">
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex justify-between items-center">
-                <h1 class="text-white text-xl font-bold">Eco Generation</h1>
-                <nav>
-                    <ul class="flex space-x-8">
-                        <li><a href="index.html" class="text-white hover:text-accent transition duration-300 font-medium">Beranda</a></li>
-                        <li><a href="about.html" class="text-white hover:text-accent transition duration-300 font-medium">Tentang Kami</a></li>
-                        <li><a href="#artikel" class="text-white hover:text-accent transition duration-300 font-medium">Artikel</a></li>
-                    </ul>
-                </nav>
-            </div>
-            
-            <!-- Mobile Navigation -->
-            <div class="md:hidden flex justify-between items-center">
-                <h1 class="text-white text-xl font-bold">Eco Generation</h1>
-                <button id="menu-toggle" class="text-white focus:outline-none hover:animate-pulse transition">
-                    <div class="w-6 flex flex-col space-y-1">
-                        <div class="h-0.5 w-full bg-white rounded"></div>
-                        <div class="h-0.5 w-full bg-white rounded"></div>
-                        <div class="h-0.5 w-full bg-white rounded"></div>
-                    </div>
-                </button>
-            </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="menu" class="hidden md:hidden bg-[#5B7917] w-full z-20 shadow-lg">
-            <nav class="container mx-auto px-4 py-2">
-                <ul class="space-y-2">
-                    <li><a href="index.html" class="block text-white hover:bg-[#4a6615] px-2 py-1 rounded">Home</a></li>
-                    <li><a href="about.html" class="block text-white hover:bg-[#4a6615] px-2 py-1 rounded">About</a></li>
-                    <li><a href="#artikel" class="block text-white hover:bg-[#4a6615] px-2 py-1 rounded">Artikel</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div id="menu-backdrop" class="hidden fixed inset-0 bg-black bg-opacity-50 z-10"></div>
-    </header>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- Hero Section dengan gambar full width -->
-    <section class="relative w-full h-screen overflow-hidden">
-        <!-- Background image full screen tanpa padding -->
-        <div class="absolute inset-0 w-full h-full">
-            <img src="./assets/header.png" 
-                 alt="Earth from space" 
-                 class="w-full h-full object-cover">
-            <!-- Overlay untuk keterbacaan teks -->
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-        </div>
-        
-        <!-- Konten di tengah -->
-        <div class="relative z-10 h-full flex items-center justify-center">
-            <div class="text-center px-4 max-w-4xl">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white fade-in-up">Generasi Muda Peduli Lestari</h1>
-                <p class="text-xl md:text-2xl mb-8 text-white fade-in-up" style="animation-delay: 0.2s;">Bersama kita bisa mencegah global warming dan menjaga bumi untuk masa depan</p>
-            </div>
-        </div>
-    </section>
+<header class="header">
+<div class="header-container">
+<a href="/" class="logo"><span class="logo-icon">🌍</span><span>Generasi Lestari</span></a>
+<nav class="nav" id="nav">
+<ul class="nav-list">
+<li><a href="#beranda" class="nav-link">Beranda</a></li>
+<li><a href="#aksi" class="nav-link">Aksi</a></li>
+<li><a href="#dampak" class="nav-link">Dampak</a></li>
+<li><a href="#artikel" class="nav-link">Artikel</a></li>
+</ul>
+<a href="#gabung" class="btn btn-primary">Gabung Sekarang</a>
+</nav>
+<button class="mobile-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+</div>
+</header>
 
-    <main>
-         <!-- Facts Section -->
-    <section class="py-16 bg-accent">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-dark mb-12">FAKTA MENGGEMPARKAN</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl hover:scale-105 transition-all duration-300">
-                    <div class="text-5xl text-primary mb-4">
-                        <i class="fas fa-temperature-high"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">1.3°C</h3>
-                    <p class="text-gray-600">Kenaikan suhu global akibat emisi gas rumah kaca telah mencapai sekitar 1,1°C - 1,35°C</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl hover:scale-105 transition-all duration-300">
-                    <div class="text-5xl text-primary mb-4">
-                        <i class="fas fa-tree"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">15 Miliar</h3>
-                    <p class="text-gray-600">Pohon hilang setiap tahunnya akibat deforestasi dan kebakaran hutan</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl hover:scale-105 transition-all duration-300">
-                    <div class="text-5xl text-primary mb-4">
-                        <i class="fas fa-trash"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">8 Juta Ton</h3>
-                    <p class="text-gray-600">Sampah plastik masuk ke laut setiap tahun mengancam ekosistem</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<main id="main">
+<section id="beranda" class="hero">
+<div class="hero-bg">
+<img src="./assets/header.png" alt="Bumi dari luar angkasa" class="hero-img" loading="eager">
+</div>
+<div class="hero-content">
+<h1 class="hero-title">Generasi Muda<br>Peduli Lestari</h1>
+<p class="hero-subtitle">Bersama kita ciptakan masa depan berkelanjutan melalui aksi nyata. Bergabunglah dengan ribuan pemuda Indonesia yang berkomitmen menjaga bumi untuk generasi mendatang.</p>
+<div class="hero-cta">
+<a href="#aksi" class="btn btn-cta">Mulai Aksi Sekarang</a>
+<a href="#dampak" class="btn btn-secondary">Lihat Dampak Kami</a>
+</div>
+</div>
+<a href="#fakta" class="scroll-indicator"><span></span></a>
+</section>
 
-        <!-- Aksi Section -->
-        <section id="aksi" class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12 text-primary">Aksi yang Bisa Kamu Lakukan</h2>
-                
-                <div class="relative">
-                    <div class="carousel flex overflow-x-auto scroll-smooth space-x-4" style="-webkit-overflow-scrolling: touch;">
-                        <div class="carousel-item flex-shrink-0 w-4/5 md:w-1/3 bg-secondary rounded-xl p-6 text-white">
-                            <div class="h-48 mb-4 rounded-lg overflow-hidden">
-                                <img src="./assets/aksi.png" alt="Bersepeda" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-xl font-bold mb-2">Mengurangi Emisi Karbon</h3>
-                            <p>Jalan kaki atau bersepeda untuk perjalanan jarak dekat, gunakanlah transportasi umum dan matikan alat elektronik saat tidak digunakan.</p>
-                        </div>
-                        <div class="carousel-item flex-shrink-0 w-4/5 md:w-1/3 bg-primary rounded-xl p-6 text-white">
-                            <div class="h-48 mb-4 rounded-lg overflow-hidden">
-                                <img src="./assets/aksi1.png" alt="Menanam pohon" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-xl font-bold mb-2">Menanam dan Merawat Pohon </h3>
-                            <p>Tanam pohon di lingkungan sekitar, rutin merawat tanaman (disiram dan diberi pupuk), ikut program penanaman pohon serta jaga pohon agar tidak ditebang sembarangan.</p>
-                        </div>
-                        <div class="carousel-item flex-shrink-0 w-4/5 md:w-1/3 bg-accent rounded-xl p-6 text-primary">
-                            <div class="h-48 mb-4 rounded-lg overflow-hidden">
-                                <img src="./assets/aksi2.png" alt="Kurangi plastik" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-xl font-bold mb-2">Kurangi Sampah & Plastik Sekali Pakai</h3>
-                            <p>Membawa tas belanja, botol minum dan tempat makan sendiri, hindari plastik sekali pakai dan gunakan produk ramah lingkungan, pilah sampah organik dan nonorganik.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section id="fakta" class="section section-white">
+<div class="container">
+<div class="section-header">
+<span class="section-label">Krisis Iklim</span>
+<h2 class="section-title">Fakta yang Perlu Kita Ketahui</h2>
+<p class="section-description">Data terkini menunjukkan urgensi aksi kita untuk mengatasi perubahan iklim global</p>
+</div>
+<div class="grid grid-3">
+<div class="card card-gradient">
+<span class="icon-large">🌡️</span>
+<span class="stat-number">+1.1°C</span>
+<h3 class="stat-label">Kenaikan Suhu Global</h3>
+<p>Suhu rata-rata bumi telah meningkat 1.1°C sejak era pra-industri akibat emisi gas rumah kaca yang terus meningkat.</p>
+<p class="stat-source">Sumber: <a href="https://www.ipcc.ch/" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">IPCC 2023</a></p>
+</div>
+<div class="card card-gradient">
+<span class="icon-large">🌳</span>
+<span class="stat-number">10 Juta Ha</span>
+<h3 class="stat-label">Hutan Hilang Per Tahun</h3>
+<p>Sekitar 10 juta hektar hutan tropis hilang setiap tahun akibat deforestasi, setara 27 lapangan sepak bola per menit.</p>
+<p class="stat-source">Sumber: <a href="https://www.fao.org/forest-resources-assessment/" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">FAO 2023</a></p>
+</div>
+<div class="card card-gradient">
+<span class="icon-large">♻️</span>
+<span class="stat-number">8 Juta Ton</span>
+<h3 class="stat-label">Plastik ke Laut Per Tahun</h3>
+<p>Setiap tahun, 8 juta ton sampah plastik masuk ke lautan, mengancam ekosistem laut dan kehidupan 700+ spesies.</p>
+<p class="stat-source">Sumber: <a href="https://www.unep.org/" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">UNEP 2024</a></p>
+</div>
+</div>
+</div>
+</section>
 
-        <!-- Dampak Section -->
-        <section class="py-16 bg-gray-100">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12 text-primary">Dampak Nyata dari Aksi Kita</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-xl shadow-md">
-                        <div class="text-5xl font-bold text-secondary mb-4">250+</div>
-                        <h3 class="text-xl font-semibold mb-2">Komunitas Aktif</h3>
-                        <p>Generasi muda seluruh Indonesia telah bergabung dalam aksi peduli lingkungan.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-md">
-                        <div class="text-5xl font-bold text-primary mb-4">10,000+</div>
-                        <h3 class="text-xl font-semibold mb-2">Pohon Teranam</h3>
-                        <p>Dalam 2 tahun terakhir, komunitas kita berhasil menanam ribuan pohon.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-md">
-                        <div class="text-5xl font-bold text-accent mb-4">50%</div>
-                        <h3 class="text-xl font-semibold mb-2">Sampah Dikurangi</h3>
-                        <p>Kampanye zero waste telah mengurangi sampah hingga 50% di komunitas kami.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section id="aksi" class="section section-cream">
+<div class="container">
+<div class="section-header">
+<span class="section-label">Ambil Peran</span>
+<h2 class="section-title">Aksi Nyata yang Bisa Kamu Lakukan</h2>
+<p class="section-description">Setiap aksi kecil memiliki dampak besar. Mulai dari diri sendiri, keluarga, hingga komunitas.</p>
+</div>
+<div class="grid grid-3">
+<div class="card action-card">
+<div class="action-img-wrap">
+<img src="./assets/aksi.png" alt="Bersepeda" class="action-img" loading="lazy">
+<span class="action-badge">Transportasi</span>
+</div>
+<div class="action-content">
+<h3>Kurangi Emisi Karbon</h3>
+<p>Pilihan transportasi kita mempengaruhi jejak karbon. Dengan beralih ke alternatif lebih hijau, kita bisa mengurangi emisi hingga 2.4 ton CO₂ per tahun.</p>
+<ul class="action-list">
+<li>Bersepeda atau jalan kaki untuk jarak dekat</li>
+<li>Gunakan transportasi umum untuk perjalanan rutin</li>
+<li>Matikan elektronik saat tidak digunakan</li>
+</ul>
+<a href="#kalkulator" style="color:var(--ocean-bright);font-weight:600">Hitung dampak kamu →</a>
+</div>
+</div>
+<div class="card action-card">
+<div class="action-img-wrap">
+<img src="./assets/aksi1.png" alt="Menanam pohon" class="action-img" loading="lazy">
+<span class="action-badge">Penghijauan</span>
+</div>
+<div class="action-content">
+<h3>Tanam & Rawat Pohon</h3>
+<p>Satu pohon dewasa dapat menyerap 22 kg CO₂ per tahun dan menghasilkan oksigen untuk 2 orang. Penanaman pohon adalah investasi jangka panjang.</p>
+<ul class="action-list">
+<li>Tanam pohon asli di lingkungan sekitarmu</li>
+<li>Rawat dengan rutin: siram dan beri pupuk organik</li>
+<li>Ikuti program penanaman komunitas lokal</li>
+</ul>
+<a href="#artikel" style="color:var(--ocean-bright);font-weight:600">Baca pengalaman kami →</a>
+</div>
+</div>
+<div class="card action-card">
+<div class="action-img-wrap">
+<img src="./assets/aksi2.png" alt="Kurangi plastik" class="action-img" loading="lazy">
+<span class="action-badge">Zero Waste</span>
+</div>
+<div class="action-content">
+<h3>Kurangi Sampah Plastik</h3>
+<p>Rata-rata orang Indonesia menghasilkan 0.7 kg sampah per hari. Dengan mengurangi plastik sekali pakai, kita bisa mencegah 250 kg sampah per tahun.</p>
+<ul class="action-list">
+<li>Bawa tas belanja, botol minum, dan tempat makan sendiri</li>
+<li>Tolak sedotan dan kantong plastik sekali pakai</li>
+<li>Pilah sampah organik dan anorganik</li>
+</ul>
+<a href="#gabung" style="color:var(--ocean-bright);font-weight:600">Gabung kampanye zero waste →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-        <!-- Calculator Section -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12 text-primary">Visualisasi Dampak Aksimu</h2>
-                
-                <div class="bg-gradient-to-b from-blue-300 to-green-200 rounded-2xl p-8 shadow-xl max-w-3xl mx-auto">
-                    <div class="bg-white/70 rounded-xl p-6 mb-6 min-h-[300px] relative overflow-hidden">
-                        <!-- Sky -->
-                        <div class="absolute top-0 left-0 right-0 h-2/3 bg-gradient-to-b from-blue-400 to-blue-200"></div>
-                        
-                        <!-- Sun -->
-                        <div id="sun" class="absolute top-8 right-8 w-16 h-16 rounded-full bg-yellow-400 shadow-lg transition-all duration-500"></div>
-                        
-                        <!-- Ground -->
-                        <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-b from-green-600 to-green-800"></div>
-                        
-                        <!-- Trees container -->
-                        <div id="trees-container" class="absolute bottom-24 left-0 right-0 flex justify-center space-x-4 transition-all duration-500"></div>
-                        
-                        <!-- Water level -->
-                        <div id="water-level" class="absolute bottom-0 left-0 right-0 bg-blue-500/70 h-6 transition-all duration-500"></div>
-                    </div>
-                    
-                    <!-- Controls -->
-                    <div class="space-y-6">
-                        <div>
-                            <label class="block text-primary font-semibold mb-2">🚴 Seberapa sering kamu bersepeda/jalan kaki daripada naik motor?</label>
-                            <input type="range" id="biking-slider" min="0" max="100" value="50" class="w-full">
-                            <div class="flex justify-between text-sm text-gray-600 mt-1">
-                                <span>Jarang</span>
-                                <span>Sering</span>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-primary font-semibold mb-2">🌳 Berapa banyak kamu terlibat dalam penanaman pohon?</label>
-                            <input type="range" id="trees-slider" min="0" max="100" value="60" class="w-full">
-                            <div class="flex justify-between text-sm text-gray-600 mt-1">
-                                <span>Tidak pernah</span>
-                                <span>Sangat aktif</span>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-primary font-semibold mb-2">🗑️ Seberapa banyak plastik sekali pakai yang kamu gunakan?</label>
-                            <input type="range" id="plastic-slider" min="0" max="100" value="30" class="w-full">
-                            <div class="flex justify-between text-sm text-gray-600 mt-1">
-                                <span>Sangat sedikit</span>
-                                <span>Banyak</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section id="kalkulator" class="section section-dark">
+<div class="container" style="max-width:900px">
+<div class="section-header">
+<span class="section-label" style="background:rgba(255,255,255,.15);color:var(--sunset-gold)">Ukur Dampakmu</span>
+<h2 class="section-title" style="color:var(--cloud-white)">Kalkulator Dampak Lingkungan</h2>
+<p class="section-description" style="color:rgba(255,255,255,.9)">Lihat seberapa besar dampak positif yang bisa kamu ciptakan dengan mengubah kebiasaan sehari-hari</p>
+</div>
+<div class="calc-form">
+<div class="form-group">
+<label for="cycling" class="form-label">🚴 Seberapa sering kamu bersepeda/jalan kaki daripada berkendara motor?</label>
+<input type="range" id="cycling" class="slider" min="0" max="7" value="2">
+<div class="slider-labels"><span>Tidak pernah</span><span>Setiap hari</span></div>
+<div class="slider-value" id="cycling-val">2 hari/minggu</div>
+</div>
+<div class="form-group">
+<label for="trees" class="form-label">🌳 Seberapa aktif kamu dalam penanaman pohon?</label>
+<input type="range" id="trees" class="slider" min="0" max="50" value="5">
+<div class="slider-labels"><span>Belum pernah</span><span>Sangat aktif</span></div>
+<div class="slider-value" id="trees-val">5 pohon/tahun</div>
+</div>
+<div class="form-group">
+<label for="plastic" class="form-label">♻️ Seberapa banyak kamu mengurangi plastik sekali pakai?</label>
+<input type="range" id="plastic" class="slider" min="0" max="100" value="30">
+<div class="slider-labels"><span>Masih banyak</span><span>Hampir nol</span></div>
+<div class="slider-value" id="plastic-val">30% berkurang</div>
+</div>
+<div class="results">
+<h3 style="text-align:center;margin-bottom:var(--space-lg)">Dampak Tahunan dari Aksimu</h3>
+<div class="results-grid">
+<div class="result-item">
+<span style="font-size:2rem">💨</span>
+<span class="result-value" id="co2">220</span>
+<span>kg CO₂ berkurang</span>
+</div>
+<div class="result-item">
+<span style="font-size:2rem">🌲</span>
+<span class="result-value" id="tree-eq">15</span>
+<span>setara pohon</span>
+</div>
+<div class="result-item">
+<span style="font-size:2rem">🗑️</span>
+<span class="result-value" id="plastic-saved">75</span>
+<span>kg plastik terhindar</span>
+</div>
+</div>
+<div style="text-align:center;margin-top:var(--space-xl);padding-top:var(--space-xl);border-top:1px solid rgba(255,255,255,.2)">
+<p style="margin-bottom:var(--space-md)">Luar biasa! Bayangkan jika 10,000 orang melakukan hal yang sama.</p>
+<a href="#gabung" class="btn btn-cta">Ajak Lebih Banyak Orang</a>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-        <!-- Artikel Section -->
-        <section id="artikel" class="py-16 bg-accent">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12 text-primary">Artikel & Informasi</h2>
-                
-                <div class="relative">
-                    <button class="artikel-prev absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-secondary transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button class="artikel-next absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-secondary transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                    
-                    <div class="carousel-artikel flex overflow-x-auto scroll-smooth space-x-4 px-12" style="-webkit-overflow-scrolling: touch;">
-                        <div class="carousel-item-artikel flex-shrink-0 w-4/5 md:w-1/3 bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-                            <img src="./assets/artikel.png" alt="Artikel 1" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2 text-primary">Kegiatan Penanaman, Penaburan Benih, dan Panen Serentak Melalui Program (SIKAP) di SMAN 1 Srengat</h3>
-                                <p class="text-gray-600 mb-4">Pada hari Minggu, 25 Januari 2025 SMAN 1 Srengat turut berpartisipa...</p>
-                                <a href="#" class="text-secondary font-semibold hover:text-primary transition">Baca selengkapnya →</a>
-                            </div>
-                        </div>
-                        <div class="carousel-item-artikel flex-shrink-0 w-4/5 md:w-1/3 bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-                            <img src="./assets/artikel1.png" alt="Artikel 2" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2 text-primary">Peringatan Hari Sejuta Pohon di SMAN 1 Srengat</h3>
-                                <p class="text-gray-600 mb-4">SMAN 1 Srengat berkomitmen untuk menumbuhkan kepedulian terhad...</p>
-                                <a href="#" class="text-secondary font-semibold hover:text-primary transition">Baca selengkapnya →</a>
-                            </div>
-                        </div>
-                        <div class="carousel-item-artikel flex-shrink-0 w-4/5 md:w-1/3 bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-                            <img src="./assets/artikel2.png" alt="Artikel 3" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2 text-primary">Hari Habitat Nasional serta Hari Cinta Puspa dan Satwa Nasional di SMAN 1 Srengat</h3>
-                                <p class="text-gray-600 mb-4">Generasi muda punya peran besar untuk menjaga bumi in...</p>
-                                <a href="#" class="text-secondary font-semibold hover:text-primary transition">Baca selengkapnya →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section id="dampak" class="section section-white">
+<div class="container">
+<div class="section-header">
+<span class="section-label">Bukti Nyata</span>
+<h2 class="section-title">Dampak yang Telah Kami Ciptakan</h2>
+<p class="section-description">Bersama-sama, kita telah menciptakan perubahan nyata untuk lingkungan</p>
+</div>
+<div class="grid grid-3">
+<div class="card" style="text-align:center">
+<div class="achievement-icon">👥</div>
+<span class="stat-number" style="color:var(--earth-deep)">250+</span>
+<h3>Komunitas Aktif</h3>
+<p style="color:var(--earth-forest)">Komunitas pemuda dari berbagai daerah di Indonesia telah bergabung dalam gerakan peduli lingkungan kami.</p>
+</div>
+<div class="card" style="text-align:center">
+<div class="achievement-icon" style="background:linear-gradient(135deg,var(--ocean-dark),var(--ocean-bright))">🌱</div>
+<span class="stat-number" style="color:var(--earth-deep)">12,487</span>
+<h3>Pohon Tertanam</h3>
+<p style="color:var(--earth-forest)">Dalam 2 tahun terakhir, bersama relawan dan mitra lokal, kami telah menanam lebih dari 12 ribu pohon di Jawa Timur.</p>
+</div>
+<div class="card" style="text-align:center">
+<div class="achievement-icon" style="background:linear-gradient(135deg,var(--sunset-rust),var(--sunset-coral))">♻️</div>
+<span class="stat-number" style="color:var(--earth-deep)">-47%</span>
+<h3>Pengurangan Sampah</h3>
+<p style="color:var(--earth-forest)">Kampanye zero waste kami berhasil mengurangi sampah plastik sekali pakai hingga 47% di lingkungan sekolah pilot project.</p>
+</div>
+</div>
+</div>
+</section>
 
-        <!-- CTA Section -->
-        <section class="py-16 bg-primary text-white">
-            <div class="container mx-auto px-4">
-                <div class="max-w-3xl mx-auto text-center">
-                    <h2 class="text-3xl font-bold mb-4">Bergabunglah dalam Gerakan Kami</h2>
-                    <p class="text-xl mb-8">Daftar untuk mendapatkan tips, informasi kegiatan, dan cara berkontribusi dalam mencegah global warming</p>
-                    <form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
-                        <input type="email" placeholder="Email kamu" class="flex-grow px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-                        <button type="submit" class="bg-accent text-primary px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition">Gabung Sekarang</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
+<section id="artikel" class="section section-cream">
+<div class="container">
+<div class="section-header">
+<span class="section-label">Cerita Kami</span>
+<h2 class="section-title">Artikel & Kegiatan Terbaru</h2>
+<p class="section-description">Ikuti perjalanan kami dalam menciptakan perubahan positif untuk lingkungan</p>
+</div>
+<div class="grid grid-3">
+<article class="card action-card">
+<div class="action-img-wrap">
+<img src="./assets/artikel.png" alt="Penanaman SIKAP" class="action-img" loading="lazy">
+<span class="action-badge">Kegiatan</span>
+</div>
+<div class="action-content">
+<div class="article-meta">
+<span>📅 25 Januari 2025</span>
+<span>✍️ Tim Generasi Lestari</span>
+</div>
+<h3>Penanaman, Penaburan Benih, dan Panen Serentak Program SIKAP di SMAN 1 Srengat</h3>
+<p style="color:var(--earth-forest)">Pada hari Minggu, 25 Januari 2025, SMAN 1 Srengat menggelar kegiatan penanaman pohon, penaburan benih, dan panen serentak sebagai bagian dari Program SIKAP. Kegiatan ini melibatkan seluruh siswa, guru, dan masyarakat sekitar dengan menanam 500 pohon.</p>
+<a href="#" style="color:var(--ocean-bright);font-weight:600">Baca selengkapnya →</a>
+</div>
+</article>
+<article class="card action-card">
+<div class="action-img-wrap">
+<img src="./assets/artikel1.png" alt="Hari Sejuta Pohon" class="action-img" loading="lazy">
+<span class="action-badge">Peringatan</span>
+</div>
+<div class="action-content">
+<div class="article-meta">
+<span>📅 10 Januari 2025</span>
+<span>✍️ Tim Generasi Lestari</span>
+</div>
+<h3>Peringatan Hari Sejuta Pohon di SMAN 1 Srengat</h3>
+<p style="color:var(--earth-forest)">SMAN 1 Srengat memperingati Hari Sejuta Pohon dengan mengadakan kampanye penanaman massal yang melibatkan 800 siswa. Setiap siswa berkomitmen untuk merawat minimal 1 pohon selama 3 tahun ke depan.</p>
+<a href="#" style="color:var(--ocean-bright);font-weight:600">Baca selengkapnya →</a>
+</div>
+</article>
+<article class="card action-card">
+<div class="action-img-wrap">
+<img src="./assets/artikel2.png" alt="Habitat Puspa Satwa" class="action-img" loading="lazy">
+<span class="action-badge">Edukasi</span>
+</div>
+<div class="action-content">
+<div class="article-meta">
+<span>📅 5 November 2024</span>
+<span>✍️ Tim Generasi Lestari</span>
+</div>
+<h3>Hari Habitat, Puspa, dan Satwa Nasional: Peran Generasi Muda</h3>
+<p style="color:var(--earth-forest)">Dalam rangka memperingati Hari Habitat Nasional serta Hari Cinta Puspa dan Satwa Nasional, SMAN 1 Srengat mengadakan workshop konservasi keanekaragaman hayati. Siswa belajar tentang spesies endemik Indonesia.</p>
+<a href="#" style="color:var(--ocean-bright);font-weight:600">Baca selengkapnya →</a>
+</div>
+</article>
+</div>
+</div>
+</section>
 
-    <footer class="bg-primary text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Generasi Muda Peduli Lestari</h3>
-                    <p>Komunitas generasi muda peduli lingkungan untuk mencegah global warming dan menjaga kelestarian bumi.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Tautan Cepat</h3>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="hover:text-accent transition">Tentang Kami</a></li>
-                        <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
-                        <li><a href="#artikel" class="hover:text-accent transition">Artikel</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Sosial Media</h3>
-                    <div class="flex space-x-4">
-                        <a href="https://www.instagram.com/eco.genneration" class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:bg-accent transition"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-accent/30 mt-12 pt-8 text-center">
-                <p>&copy; 2026 Generasi Muda Peduli Lestari.</p>
-            </div>
-        </div>
-    </footer>
+<section id="gabung" class="section section-dark" style="position:relative;overflow:hidden">
+<div style="position:absolute;top:-30%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(255,255,255,.1),transparent 70%);border-radius:50%;animation:float 6s ease-in-out infinite"></div>
+<div class="container" style="max-width:800px;text-align:center;position:relative;z-index:1">
+<span style="font-size:4rem;margin-bottom:var(--space-lg);display:block;animation:float 3s ease-in-out infinite">🤝</span>
+<h2 style="color:var(--cloud-white);margin-bottom:var(--space-md)">Mari Bergabung dalam Gerakan Kami</h2>
+<p style="font-size:1.25rem;margin-bottom:var(--space-2xl);opacity:.95">Daftarkan email kamu untuk mendapatkan tips lingkungan, informasi kegiatan terbaru, dan cara berkontribusi dalam mencegah perubahan iklim.</p>
+<form class="join-form" id="join-form">
+<input type="email" id="email" class="join-input" placeholder="nama@email.com" required>
+<button type="submit" class="btn btn-cta">Gabung Sekarang</button>
+</form>
+<p style="font-size:.875rem;opacity:.8">Dengan mendaftar, kamu setuju dengan <a href="#" style="color:var(--sunset-gold);text-decoration:underline">Kebijakan Privasi</a> kami.</p>
+<div id="message" role="alert"></div>
+</div>
+</section>
+</main>
 
-    <script>
-           // Menu functionality
-        const menuToggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('menu');
-        const menuBackdrop = document.getElementById('menu-backdrop');
-        
-        if(menuToggle) {
-            menuToggle.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-                menuBackdrop.classList.toggle('hidden');
-            });
-        }
-        
-        if(menuBackdrop) {
-            menuBackdrop.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                menuBackdrop.classList.add('hidden');
-            });
-        }
-        
-        // Artikel Carousel functionality
-        const artikelCarousel = document.querySelector('.carousel-artikel');
-        const artikelPrevBtn = document.querySelector('.artikel-prev');
-        const artikelNextBtn = document.querySelector('.artikel-next');
-        
-        artikelNextBtn.addEventListener('click', () => {
-            artikelCarousel.scrollBy({ left: 300, behavior: 'smooth' });
-        });
-        
-        artikelPrevBtn.addEventListener('click', () => {
-            artikelCarousel.scrollBy({ left: -300, behavior: 'smooth' });
-        });
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="footer-logo"><span style="font-size:2rem;margin-right:var(--space-sm)">🌍</span>Generasi Lestari</div>
+<p style="margin:var(--space-md) 0">Komunitas generasi muda Indonesia yang berkomitmen menciptakan masa depan berkelanjutan melalui aksi nyata melawan perubahan iklim.</p>
+<div class="social-links">
+<a href="https://instagram.com/generasilestari" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+<a href="https://facebook.com/generasilestari" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+<a href="https://twitter.com/generasilestari" class="social-link" target="_blank" rel="noopener" aria-label="Twitter">🐦</a>
+<a href="https://youtube.com/@generasilestari" class="social-link" target="_blank" rel="noopener" aria-label="YouTube">📺</a>
+</div>
+</div>
+<div>
+<h3 style="color:var(--cloud-white);margin-bottom:var(--space-lg)">Navigasi</h3>
+<ul class="footer-nav">
+<li><a href="#beranda">Beranda</a></li>
+<li><a href="#aksi">Aksi Kami</a></li>
+<li><a href="#dampak">Dampak</a></li>
+<li><a href="#artikel">Artikel</a></li>
+</ul>
+</div>
+<div>
+<h3 style="color:var(--cloud-white);margin-bottom:var(--space-lg)">Program</h3>
+<ul class="footer-nav">
+<li><a href="#">Penanaman Pohon</a></li>
+<li><a href="#">Kampanye Zero Waste</a></li>
+<li><a href="#">Edukasi Lingkungan</a></li>
+<li><a href="#">Program SIKAP</a></li>
+</ul>
+</div>
+<div>
+<h3 style="color:var(--cloud-white);margin-bottom:var(--space-lg)">Hubungi Kami</h3>
+<ul class="footer-nav">
+<li>📧 <a href="mailto:info@generasilestari.id">info@generasilestari.id</a></li>
+<li>📞 <a href="tel:+62342123456">+62 342 123 456</a></li>
+<li>📍 SMAN 1 Srengat, Blitar, Jawa Timur</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2025 Generasi Lestari. Seluruh hak cipta dilindungi.</p>
+<ul class="footer-legal">
+<li><a href="#">Kebijakan Privasi</a></li>
+<li><a href="#">Syarat & Ketentuan</a></li>
+<li><a href="#">Kontak</a></li>
+</ul>
+</div>
+</div>
+</footer>
 
-        // Interactive sliders
-        const bikingSlider = document.getElementById('biking-slider');
-        const treesSlider = document.getElementById('trees-slider');
-        const plasticSlider = document.getElementById('plastic-slider');
-        const waterLevel = document.getElementById('water-level');
-        const sun = document.getElementById('sun');
-        const treesContainer = document.getElementById('trees-container');
-
-        // Initialize trees
-        function createTrees(count) {
-            treesContainer.innerHTML = '';
-            for (let i = 0; i < count; i++) {
-                const tree = document.createElement('div');
-                tree.className = 'w-8 h-12 bg-green-700 rounded-full relative';
-                tree.innerHTML = '<div class="absolute -top-4 left-0 w-8 h-8 bg-green-500 rounded-full"></div>';
-                treesContainer.appendChild(tree);
-            }
-        }
-
-        function updateVisualization() {
-            // Sun intensity based on biking (less biking = more pollution = hotter sun)
-            const bikingValue = bikingSlider.value;
-            const sunIntensity = 100 - bikingValue;
-            sun.style.backgroundColor = `hsl(50, 100%, ${50 + sunIntensity/2}%)`;
-            
-            // Water level based on plastic usage (more plastic = higher water level)
-            const plasticValue = plasticSlider.value;
-            const waterHeight = 24 + (plasticValue / 5);
-            waterLevel.style.height = `${waterHeight}px`;
-            
-            // Trees based on trees planted
-            const treesValue = treesSlider.value;
-            const treeCount = Math.floor(treesValue / 20);
-            createTrees(treeCount);
-            
-            // Change tree appearance based on overall score
-            const overallScore = (parseInt(bikingValue) + parseInt(treesValue) + (100 - parseInt(plasticValue))) / 3;
-            if (overallScore < 30) {
-                treesContainer.querySelectorAll('div').forEach(tree => {
-                    tree.style.backgroundColor = '#7a5c07';
-                    tree.children[0].style.backgroundColor = '#a67c00';
-                });
-            }
-        }
-
-        // Initial setup
-        createTrees(3);
-        
-        // Event listeners for sliders
-        bikingSlider.addEventListener('input', updateVisualization);
-        treesSlider.addEventListener('input', updateVisualization);
-        plasticSlider.addEventListener('input', updateVisualization);
-        
-        // Animation on scroll
-        const observerOptions = {
-            threshold: 0.1
-        };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                }
-            });
-        }, observerOptions);
-        // Observe sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-        // Stagger animation for cards
-        document.querySelectorAll('.grid.grid-cols-1.md\\:grid-cols-3 .bg-white, .carousel-item-artikel').forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.2}s`;
-            observer.observe(card);
-        });
-    </script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<script>
+(function(){'use strict';const d=document,qs=s=>d.querySelector(s),qsa=s=>d.querySelectorAll(s);const header=qs('.header'),toggle=qs('#menu-toggle'),nav=qs('#nav');let scrolled=!1;window.addEventListener('scroll',()=>{const s=window.pageYOffset>100;if(s!==scrolled){scrolled=s;header.classList.toggle('scrolled',s)}},{passive:!0});if(toggle&&nav){toggle.addEventListener('click',()=>{const active=nav.classList.toggle('active');toggle.textContent=active?'✕':'☰';toggle.setAttribute('aria-expanded',active)});qsa('.nav-link').forEach(l=>l.addEventListener('click',()=>{nav.classList.remove('active');toggle.textContent='☰';toggle.setAttribute('aria-expanded','false')}))}qsa('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const href=a.getAttribute('href');if(href==='#'){e.preventDefault();return}const t=qs(href);if(t){e.preventDefault();const h=header.offsetHeight;window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-h-20,behavior:'smooth'});history.pushState(null,null,href)}}));const cycling=qs('#cycling'),cyclingVal=qs('#cycling-val'),trees=qs('#trees'),treesVal=qs('#trees-val'),plastic=qs('#plastic'),plasticVal=qs('#plastic-val'),co2El=qs('#co2'),treeEqEl=qs('#tree-eq'),plasticSavedEl=qs('#plastic-saved');function calc(){const c=parseInt(cycling.value),t=parseInt(trees.value),p=parseInt(plastic.value);const co2=(c/7*104)+(t*22);const treesEq=Math.round(co2/22);const plasticS=(p/100)*250;animate(co2El,co2);animate(treeEqEl,treesEq);animate(plasticSavedEl,plasticS)}function animate(el,end){let curr=0;const step=end/60;const timer=setInterval(()=>{curr+=step;if(curr>=end){el.textContent=Math.round(end);clearInterval(timer)}else{el.textContent=Math.round(curr)}},16)}if(cycling){cycling.addEventListener('input',e=>{const v=e.target.value;cyclingVal.textContent=v==0?'Tidak pernah':v==7?'Setiap hari':`${v} hari/minggu`;calc()})}if(trees){trees.addEventListener('input',e=>{const v=e.target.value;treesVal.textContent=v==0?'Belum pernah':v>=50?'50+ pohon/tahun':`${v} pohon/tahun`;calc()})}if(plastic){plastic.addEventListener('input',e=>{const v=e.target.value;plasticVal.textContent=v==0?'Masih banyak':v==100?'Hampir nol':`${v}% berkurang`;calc()})}if(cycling&&trees&&plastic)calc();const form=qs('#join-form'),email=qs('#email'),msg=qs('#message');if(form&&email){form.addEventListener('submit',async e=>{e.preventDefault();const em=email.value.trim();msg.innerHTML='';msg.className='';if(!em||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){msg.textContent='Mohon masukkan email yang valid';msg.className='join-error';return}const btn=form.querySelector('button');btn.disabled=!0;btn.textContent='Memproses...';try{await new Promise(r=>setTimeout(r,1500));msg.textContent=`Terima kasih! Email konfirmasi telah dikirim ke ${em}`;msg.className='join-success';form.reset()}catch(err){msg.textContent='Terjadi kesalahan. Silakan coba lagi.';msg.className='join-error'}finally{btn.disabled=!1;btn.textContent='Gabung Sekarang'}setTimeout(()=>{msg.innerHTML='';msg.className=''},8000)})}const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})},{threshold:.1,rootMargin:'0px 0px -100px 0px'});qsa('.card').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(30px)';el.style.transition='opacity 0.6s ease,transform 0.6s ease';obs.observe(el)});console.log('🌍 Generasi Lestari initialized')})();
+</script>
 </body>
 </html>
