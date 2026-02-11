@@ -1,245 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Kami - Generasi Muda Peduli Lestari</title>
-    <meta name="description" content="Tentang Generasi Muda Peduli Lestari dan program kami">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#31694E',
-                        secondary: '#658C58',
-                        accent: '#F0E491'
-                    },
-                    fontFamily: {
-                        poppins: ['Poppins', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tentang Generasi Lestari - Komunitas generasi muda Indonesia berkomitmen mencegah perubahan iklim melalui aksi nyata dan program berkelanjutan">
+<meta name="keywords" content="tentang kami, generasi lestari, lingkungan hidup, generasi muda, sustainability, Indonesia">
+<meta property="og:title" content="Tentang Kami - Eco Generation">
+<meta property="og:description" content="Mengenal lebih dekat komunitas generasi muda peduli lingkungan">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://generasi-muda-peduli-lestari.vercel.app/about">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌍</text></svg>">
+<title>Tentang Kami - Eco Generation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700;900&family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+<style>
+:root{
+--earth-deep:#1a3a2e;
+--earth-forest:#2d5f4d;
+--earth-moss:#4a7c59;
+--earth-sage:#7aa874;
+--earth-spring:#b8d8a8;
+--earth-cream:#f4f1e8;
+--ocean-dark:#0d3b52;
+--ocean-bright:#2b8ab8;
+--sunset-rust:#d97642;
+--sunset-coral:#f2a365;
+--sunset-gold:#f4c430;
+--cloud-white:#fff;
+--font-display:'Playfair Display',serif;
+--font-heading:'Crimson Pro',serif;
+--font-body:'DM Sans',sans-serif;
+--space-xs:.5rem;
+--space-sm:.75rem;
+--space-md:1rem;
+--space-lg:1.5rem;
+--space-xl:2.5rem;
+--space-2xl:4rem;
+--space-3xl:6.5rem;
+--container-max:1280px;
+--radius-sm:8px;
+--radius-md:16px;
+--radius-lg:24px;
+--radius-xl:32px;
+--shadow-sm:0 2px 8px rgba(26,58,46,.08);
+--shadow-md:0 4px 16px rgba(26,58,46,.12);
+--shadow-lg:0 8px 32px rgba(26,58,46,.16);
+--shadow-xl:0 16px 48px rgba(26,58,46,.2)
+}
+*,::after,::before{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);line-height:1.7;color:var(--earth-deep);background:var(--earth-cream);overflow-x:hidden}
+h1,h2,h3{font-family:var(--font-heading);font-weight:700;line-height:1.2;margin-bottom:var(--space-md)}
+h1{font-size:clamp(2.5rem,6vw,5rem);font-weight:900;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,4vw,3.5rem)}
+h3{font-size:clamp(1.5rem,3vw,2.25rem)}
+p{margin-bottom:var(--space-md)}
+a{color:var(--ocean-bright);text-decoration:none;transition:color .3s}
+a:hover{color:var(--ocean-dark)}
+img{max-width:100%;display:block}
+.skip-link{position:absolute;top:-100px;left:0;background:var(--earth-deep);color:var(--cloud-white);padding:var(--space-md);z-index:100;border-radius:0 0 var(--radius-md) 0}
+.skip-link:focus{top:0;outline:3px solid var(--sunset-gold)}
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(244,241,232,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(26,58,46,.1);transition:all .3s}
+.header.scrolled{box-shadow:var(--shadow-md)}
+.header-container{max-width:var(--container-max);margin:0 auto;padding:var(--space-md) clamp(1.5rem,5vw,3rem);display:flex;justify-content:space-between;align-items:center;gap:var(--space-xl)}
+.logo{display:flex;align-items:center;gap:var(--space-sm);font-family:var(--font-display);font-size:1.5rem;font-weight:900;color:var(--earth-deep)}
+.logo:hover{transform:translateY(-2px)}
+.logo-icon{font-size:2rem;animation:rotate 30s linear infinite}
+@keyframes rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.nav{display:flex;align-items:center;gap:var(--space-xl)}
+.nav-list{display:flex;list-style:none;gap:var(--space-lg)}
+.nav-link{position:relative;font-weight:500;color:var(--earth-deep);padding:var(--space-xs) var(--space-sm);transition:color .3s}
+.nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(135deg,var(--earth-deep) 0%,var(--earth-forest) 100%);transition:width .3s}
+.nav-link:hover::after{width:100%}
+.btn{padding:var(--space-sm) var(--space-lg);border-radius:var(--radius-lg);font-weight:600;border:none;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block}
+.btn-primary{background:linear-gradient(135deg,var(--earth-deep),var(--earth-forest));color:var(--cloud-white);box-shadow:var(--shadow-sm)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn-secondary{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);color:var(--cloud-white);border:2px solid rgba(255,255,255,.3)}
+.btn-secondary:hover{background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.6)}
+.btn-cta{background:linear-gradient(135deg,var(--sunset-rust),var(--sunset-coral),var(--sunset-gold));color:var(--earth-deep)}
+.mobile-toggle{display:none;background:0 0;border:none;font-size:1.5rem;cursor:pointer}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding-top:var(--space-3xl)}
+.hero-bg{position:absolute;inset:0;z-index:-1}
+.hero-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,58,46,.95) 0%,rgba(26,58,46,.7) 100%);z-index:1}
+.hero-img{width:100%;height:100%;object-fit:cover;animation:zoom 30s ease-in-out infinite alternate}
+@keyframes zoom{from{transform:scale(1)}to{transform:scale(1.1)}}
+.hero-content{position:relative;z-index:2;max-width:var(--container-max);margin:0 auto;padding:var(--space-2xl) clamp(1.5rem,5vw,3rem);text-align:center;color:var(--cloud-white)}
+.hero-title{font-family:var(--font-display);font-size:clamp(3rem,8vw,6rem);line-height:1.1;margin-bottom:var(--space-lg);text-shadow:0 4px 24px rgba(0,0,0,.3);animation:fadeUp 1s ease backwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.hero-subtitle{font-size:clamp(1.125rem,2vw,1.5rem);margin-bottom:var(--space-2xl);max-width:800px;margin-left:auto;margin-right:auto;text-shadow:0 2px 12px rgba(0,0,0,.2);animation:fadeUp 1s .2s ease backwards}
+.hero-cta{display:flex;gap:var(--space-md);justify-content:center;flex-wrap:wrap;animation:fadeUp 1s .4s ease backwards}
+.section{padding:var(--space-3xl) clamp(1.5rem,5vw,3rem)}
+.section-white{background:var(--cloud-white)}
+.section-cream{background:var(--earth-cream)}
+.section-dark{background:linear-gradient(135deg,var(--earth-deep),var(--earth-forest));color:var(--cloud-white)}
+.container{max-width:var(--container-max);margin:0 auto}
+.grid{display:grid;gap:var(--space-xl)}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid-4{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--cloud-white);border-radius:var(--radius-lg);padding:var(--space-xl);box-shadow:var(--shadow-sm);transition:all .3s;opacity:0;transform:translateY(30px)}
+.card.visible{opacity:1;transform:translateY(0)}
+.card:hover{box-shadow:var(--shadow-lg);transform:translateY(-8px)}
+.stat-card{text-align:center;padding:var(--space-xl);border-radius:var(--radius-lg);background:linear-gradient(135deg,var(--earth-moss),var(--earth-sage));color:var(--cloud-white);box-shadow:var(--shadow-md)}
+.stat-number{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);font-weight:900;margin-bottom:var(--space-sm)}
+.stat-label{font-size:1.125rem;opacity:.95}
+.value-card{text-align:center}
+.value-icon{font-size:4rem;margin-bottom:var(--space-md);display:block}
+.footer{background:linear-gradient(135deg,var(--earth-deep),var(--earth-forest));color:var(--cloud-white);padding:var(--space-3xl) clamp(1.5rem,5vw,3rem) var(--space-xl)}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--space-2xl);margin-bottom:var(--space-2xl)}
+.footer-logo{font-family:var(--font-display);font-size:1.75rem;font-weight:900;margin-bottom:var(--space-md);display:flex;align-items:center;gap:var(--space-sm)}
+.footer-nav{list-style:none}
+.footer-nav li{margin-bottom:var(--space-sm)}
+.footer-nav a{color:rgba(255,255,255,.8);transition:color .3s}
+.footer-nav a:hover{color:var(--cloud-white)}
+.social-links{display:flex;gap:var(--space-md);margin-top:var(--space-lg)}
+.social-link{display:flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.1);font-size:1.5rem;transition:all .3s}
+.social-link:hover{background:rgba(255,255,255,.2);transform:translateY(-4px)}
+.footer-bottom{padding-top:var(--space-xl);border-top:1px solid rgba(255,255,255,.15);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-md)}
+.footer-legal{list-style:none;display:flex;gap:var(--space-lg)}
+.footer-legal a{color:rgba(255,255,255,.7)}
+.about-hero{min-height:90vh;display:grid;align-items:center;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--space-2xl)}
+.about-content{background:rgba(255,255,255,.98);border-radius:var(--radius-xl);padding:var(--space-2xl);box-shadow:var(--shadow-xl);animation:fadeUp 1s ease backwards}
+.about-image{border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl);animation:fadeUp 1s .3s ease backwards}
+.about-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.about-image:hover img{transform:scale(1.05)}
+.program-list{list-style:none;margin-top:var(--space-lg)}
+.program-item{display:flex;gap:var(--space-md);margin-bottom:var(--space-lg);padding:var(--space-md);border-radius:var(--radius-md);background:rgba(122,168,116,.05);transition:all .3s}
+.program-item:hover{background:rgba(122,168,116,.1);transform:translateX(8px)}
+.program-icon{font-size:2rem;flex-shrink:0}
+.program-text strong{color:var(--earth-deep);display:block;margin-bottom:var(--space-xs)}
+@media(max-width:768px){
+.nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cloud-white);flex-direction:column;padding:var(--space-lg);box-shadow:var(--shadow-lg);border-radius:0 0 var(--radius-md) var(--radius-md)}
+.nav.active{display:flex}
+.nav-list{flex-direction:column;width:100%}
+.nav-link{display:block;padding:var(--space-md);border-radius:var(--radius-sm)}
+.mobile-toggle{display:block}
+.hero{min-height:auto;padding-top:var(--space-2xl);padding-bottom:var(--space-2xl)}
+.hero-title{font-size:2.5rem}
+.about-hero{min-height:auto;grid-template-columns:1fr}
+.about-image{display:none}
+.grid-4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.footer-bottom{flex-direction:column;text-align:center}
+.footer-legal{flex-direction:column;text-align:center}
+}
+</style>
 </head>
-<body class="bg-[#f5f5f5]">
-    <!-- Navigation Bar -->
-    <header class="bg-[#31694E] shadow-md sticky top-0 z-50" id="top">
-        <div class="container mx-auto px-4 py-3">
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex justify-between items-center">
-                <h1 class="text-white text-xl font-bold">Eco Dashboard</h1>
-                <nav>
-                    <ul class="flex space-x-8">
-                        <li><a href="index.html" class="text-white hover:text-accent transition duration-300 font-medium">Home</a></li>
-                        <li><a href="about.html" class="text-white hover:text-accent transition duration-300 font-medium">About</a></li>
-                        <li><a href="index.html#artikel" class="text-white hover:text-accent transition duration-300 font-medium">Artikel</a></li>
-                    </ul>
-                </nav>
-            </div>
-            
-            <!-- Mobile Navigation -->
-            <div class="md:hidden flex justify-between items-center">
-                <h1 class="text-white text-xl font-bold">Eco Dashboard</h1>
-                <button id="menu-toggle" class="text-white focus:outline-none hover:animate-pulse transition">
-                    <div class="w-6 flex flex-col space-y-1">
-                        <div class="h-0.5 w-full bg-white rounded"></div>
-                        <div class="h-0.5 w-full bg-white rounded"></div>
-                        <div class="h-0.5 w-full bg-white rounded"></div>
-                    </div>
-                </button>
-            </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="menu" class="hidden md:hidden bg-[#5B7917] w-full z-20 shadow-lg">
-            <nav class="container mx-auto px-4 py-2">
-                <ul class="space-y-2">
-                    <li><a href="index.html" class="block text-white hover:bg-[#4a6615] px-2 py-1 rounded">Home</a></li>
-                    <li><a href="about.html" class="block text-white hover:bg-[#4a6615] px-2 py-1 rounded">About</a></li>
-                    <li><a href="index.html#artikel" class="block text-white hover:bg-[#4a6615] px-2 py-1 rounded">Artikel</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div id="menu-backdrop" class="hidden fixed inset-0 bg-black bg-opacity-50 z-10"></div>
-    </header>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- Hero Section dengan tulisan About Us di gambar bumi -->
-    <section class="relative w-full h-screen overflow-hidden">
-        <!-- Background image full screen -->
-        <div class="absolute inset-0 w-full h-full">
-            <img src="./assets/header.png" 
-                 alt="Earth from space" 
-                 class="w-full h-full object-cover">
-            <!-- Overlay -->
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        </div>
-        
-        <!-- Tulisan About Us di tengah -->
-        <div class="relative z-10 h-full flex items-center justify-center">
-            <div class="text-center px-4">
-                <h1 class="text-6xl md:text-8xl font-bold text-white fade-in-up mb-4">Tentang Kami</h1>
-                <p class="text-xl md:text-2xl text-white fade-in-up" style="animation-delay: 0.2s;">Mengenal Lebih Dekat Generasi Muda Peduli Lestari</p>
-            </div>
-        </div>
-    </section>
+<header class="header" id="header">
+<div class="header-container">
+<a href="index.html" class="logo">
+<a href="/" class="logo"><img src="assets/logo.png" alt="Eco Generation" style="width:84px;height:84px;"><span>Eco Generation</span></a>
+<nav class="nav" id="nav">
+<ul class="nav-list">
+<li><a href="index.html" class="nav-link">Beranda</a></li>
+<li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+<li><a href="index.html#aksi" class="nav-link">Aksi Kami</a></li>
+<li><a href="index.html#dampak" class="nav-link">Dampak</a></li>
+<li><a href="index.html#artikel" class="nav-link">Artikel</a></li>
+</ul>
+<a href="index.html#gabung" class="btn btn-primary">Gabung Sekarang</a>
+</nav>
+<button class="mobile-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+</div>
+</header>
 
-    <!-- Content Section dengan background cerah -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-                <!-- Left Side - Image -->
-                <div class="fade-in-up">
-                    <div class="rounded-2xl overflow-hidden shadow-2xl">
-                        <img src="https://picsum.photos/600/800?random=10" 
-                             alt="Tim Generasi Muda Peduli Lestari" 
-                             class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                    </div>
-                </div>
-                
-                <!-- Right Side - Information -->
-                <div class="space-y-6 fade-in-up" style="animation-delay: 0.2s;">
-                    <div>
-                        <h2 class="text-3xl font-bold text-primary mb-4">Siapa Kami</h2>
-                        <p class="text-lg leading-relaxed text-gray-700">
-                            Generasi Muda Peduli Lestari adalah generasi yang percaya bahwa masa depan bumi ada di tangan kita. Website ini dibuat sebagai media kampanye untuk mengajak anak muda agar lebih peduli terhadap lingkungan melalui aksi sederhana yang bisa dilakukan sehari-hari.
-                        </p>
-                    </div>
-                    
-                    <div>
-                        <h2 class="text-3xl font-bold text-primary mb-4">Program Kami</h2>
-                        <ul class="space-y-3 text-lg">
-                            <li class="flex items-start">
-                                <span class="text-primary mr-3 text-2xl">🌱</span>
-                                <div>
-                                    <strong class="text-secondary">Penanaman Pohon</strong>
-                                    <p class="text-gray-600">Program rutin menanam ribuan pohon di berbagai daerah</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-primary mr-3 text-2xl">♻️</span>
-                                <div>
-                                    <strong class="text-secondary">Zero Waste Campaign</strong>
-                                    <p class="text-gray-600">Edukasi dan kampanye pengurangan sampah plastik</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-primary mr-3 text-2xl">🚴</span>
-                                <div>
-                                    <strong class="text-secondary">Green Transportation</strong>
-                                    <p class="text-gray-600">Mendorong penggunaan transportasi ramah lingkungan</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-primary mr-3 text-2xl">📚</span>
-                                <div>
-                                    <strong class="text-secondary">Eco Education</strong>
-                                    <p class="text-gray-600">Workshop dan seminar tentang lingkungan hidup</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h2 class="text-3xl font-bold text-primary mb-4">Tujuan Kami</h2>
-                        <p class="text-lg leading-relaxed text-gray-700">
-                            Mewujudkan Indonesia yang lebih hijau dan berkelanjutan dengan menggerakkan 1 juta generasi muda untuk aktif dalam aksi peduli lingkungan. Kami bertujuan mengurangi emisi karbon nasional hingga 20% melalui gerakan kolektif dan berkelanjutan.
-                        </p>
-                    </div>
-                    
-                    <div class="pt-4">
-                        <a href="index.html" class="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-secondary transition duration-300 shadow-lg">
-                            Bergabung Bersama Kami
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<main id="main">
+<section class="hero">
+<div class="hero-bg">
+<img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1920&h=1080&fit=crop" alt="Generasi muda peduli lingkungan" class="hero-img" loading="eager">
+</div>
+<div class="hero-content">
+<div class="about-hero">
+<div class="about-content">
+<h1 style="color:var(--earth-deep);font-size:clamp(2.5rem,5vw,4rem)">Tentang Kami</h1>
+<div style="margin-top:var(--space-xl);color:var(--earth-forest)">
+<h2 style="color:var(--earth-deep);font-size:clamp(1.5rem,3vw,2rem);margin-top:var(--space-xl)">Siapa Kami</h2>
+<p style="font-size:1.125rem;line-height:1.8">
+Generasi Lestari adalah komunitas generasi muda Indonesia yang berkomitmen untuk mencegah perubahan iklim dan menjaga kelestarian bumi. Kami percaya bahwa perubahan besar dimulai dari aksi kecil yang konsisten.
+</p>
 
-    <!-- CTA Section -->
-    <section class="py-16 bg-primary text-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-4">Mari Bersama Menjaga Bumi</h2>
-                <p class="text-xl mb-8">Jadilah bagian dari perubahan. Bergabunglah dengan ribuan generasi muda lainnya yang peduli pada masa depan bumi.</p>
-                <a href="index.html" class="inline-block bg-accent text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition duration-300 shadow-lg">
-                    Kembali ke Home
-                </a>
-            </div>
-        </div>
-    </section>
+<h2 style="color:var(--earth-deep);font-size:clamp(1.5rem,3vw,2rem);margin-top:var(--space-xl)">Program Kami</h2>
+<ul class="program-list">
+<li class="program-item">
+<span class="program-icon">🌱</span>
+<div class="program-text">
+<strong>Penanaman Pohon</strong>
+<span>Program rutin menanam ribuan pohon di berbagai daerah untuk meningkatkan tutupan hijau dan menyerap emisi karbon</span>
+</div>
+</li>
+<li class="program-item">
+<span class="program-icon">♻️</span>
+<div class="program-text">
+<strong>Zero Waste Campaign</strong>
+<span>Edukasi dan kampanye pengurangan sampah plastik melalui workshop dan gerakan komunitas</span>
+</div>
+</li>
+<li class="program-item">
+<span class="program-icon">🚴</span>
+<div class="program-text">
+<strong>Green Transportation</strong>
+<span>Mendorong penggunaan transportasi ramah lingkungan untuk mengurangi emisi gas rumah kaca</span>
+</div>
+</li>
+<li class="program-item">
+<span class="program-icon">📚</span>
+<div class="program-text">
+<strong>Eco Education</strong>
+<span>Workshop dan seminar tentang lingkungan hidup untuk meningkatkan kesadaran generasi muda</span>
+</div>
+</li>
+</ul>
 
-    <footer class="bg-primary text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Generasi Muda Peduli Lestari</h3>
-                    <p>Komunitas generasi muda peduli lingkungan untuk mencegah global warming dan menjaga kelestarian bumi.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Tautan Cepat</h3>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="hover:text-accent transition">Tentang Kami</a></li>
-                        <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
-                        <li><a href="index.html#artikel" class="hover:text-accent transition">Artikel</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Sosial Media</h3>
-                    <div class="flex space-x-4">
-                        <a href="https://www.instagram.com/eco.genneration" class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:bg-accent transition"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-accent/30 mt-12 pt-8 text-center">
-                <p>&copy; 2026 Generasi Muda Peduli Lestari.</p>
-            </div>
-        </div>
-    </footer>
+<h2 style="color:var(--earth-deep);font-size:clamp(1.5rem,3vw,2rem);margin-top:var(--space-xl)">Tujuan Kami</h2>
+<p style="font-size:1.125rem;line-height:1.8">
+Mewujudkan Indonesia yang lebih hijau dan berkelanjutan dengan menggerakkan 1 juta generasi muda untuk aktif dalam aksi peduli lingkungan. Kami bertujuan mengurangi emisi karbon nasional hingga 20% melalui gerakan kolektif dan berkelanjutan.
+</p>
 
-    <script>
-        // Menu functionality
-        const menuToggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('menu');
-        const menuBackdrop = document.getElementById('menu-backdrop');
-        
-        if(menuToggle) {
-            menuToggle.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-                menuBackdrop.classList.toggle('hidden');
-            });
-        }
-        
-        if(menuBackdrop) {
-            menuBackdrop.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                menuBackdrop.classList.add('hidden');
-            });
-        }
-    </script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<div style="margin-top:var(--space-xl)">
+<a href="index.html#gabung" class="btn btn-primary" style="font-size:1.125rem">Bergabung Bersama Kami</a>
+</div>
+</div>
+</div>
+<div class="about-image">
+<img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=1000&fit=crop" alt="Tim Generasi Lestari" loading="lazy">
+</div>
+</div>
+</div>
+</section>
+
+<
+
+<section class="section section-dark" style="position:relative;overflow:hidden">
+<div style="position:absolute;top:-30%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(255,255,255,.1),transparent 70%);border-radius:50%;animation:float 6s ease-in-out infinite"></div>
+<div class="container" style="max-width:800px;text-align:center;position:relative;z-index:1">
+<span style="font-size:4rem;margin-bottom:var(--space-lg);display:block;animation:float 3s ease-in-out infinite">🤝</span>
+<h2 style="color:var(--cloud-white);margin-bottom:var(--space-md)">Mari Bergabung dalam Gerakan Kami</h2>
+<p style="font-size:1.25rem;margin-bottom:var(--space-2xl);opacity:.95">Jadilah bagian dari perubahan. Bergabunglah dengan ribuan generasi muda lainnya yang peduli pada masa depan bumi.</p>
+<a href="index.html#gabung" class="btn btn-cta" style="font-size:1.125rem;padding:var(--space-md) var(--space-xl)">Bergabung Sekarang</a>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="footer-logo"><span style="font-size:2rem;margin-right:var(--space-sm)">🌍</span>Generasi Lestari</div>
+<p style="margin:var(--space-md) 0">Komunitas generasi muda Indonesia yang berkomitmen menciptakan masa depan berkelanjutan melalui aksi nyata melawan perubahan iklim.</p>
+<div class="social-links">
+<a href="https://instagram.com/generasilestari" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+</div>
+</div>
+<div>
+<h3 style="color:var(--cloud-white);margin-bottom:var(--space-lg)">Navigasi</h3>
+<ul class="footer-nav">
+<li><a href="index.html">Beranda</a></li>
+<li><a href="about.html">Tentang</a></li>
+<li><a href="index.html#aksi">Aksi Kami</a></li>
+<li><a href="index.html#dampak">Dampak</a></li>
+<li><a href="index.html#artikel">Artikel</a></li>
+</ul>
+</div>
+
+<div>
+<h3 style="color:var(--cloud-white);margin-bottom:var(--space-lg)">Hubungi Kami</h3>
+<ul class="footer-nav">
+<li>📧 <a href="mailto:sman1srengat@yahoo.co.id">sman1srengat@yahoo.co.id</a></li>
+<li>📞 <a href="tel:0342551096">0342551096</a></li>
+<li>📍 SMAN 1 Srengat, Blitar, Jawa Timur</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 Eco Generation. Seluruh hak cipta dilindungi.</p>
+<ul class="footer-legal">
+</ul>
+</div>
+</div>
+</footer>
+
+<script>
+(function(){'use strict';const d=document,qs=s=>d.querySelector(s),qsa=s=>d.querySelectorAll(s);const header=qs('.header'),toggle=qs('#menu-toggle'),nav=qs('#nav');let scrolled=!1;window.addEventListener('scroll',()=>{const s=window.pageYOffset>100;if(s!==scrolled){scrolled=s;header.classList.toggle('scrolled',s)}},{passive:!0});if(toggle&&nav){toggle.addEventListener('click',()=>{const active=nav.classList.toggle('active');toggle.textContent=active?'✕':'☰';toggle.setAttribute('aria-expanded',active)});qsa('.nav-link').forEach(l=>l.addEventListener('click',()=>{nav.classList.remove('active');toggle.textContent='☰';toggle.setAttribute('aria-expanded','false')}))}qsa('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const href=a.getAttribute('href');if(href==='#'){e.preventDefault();return}const t=qs(href);if(t){e.preventDefault();const h=header.offsetHeight;window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-h-20,behavior:'smooth'});history.pushState(null,null,href)}}));const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}})},{threshold:.1,rootMargin:'0px 0px -100px 0px'});qsa('.card').forEach(c=>obs.observe(c))})();
+</script>
 </body>
 </html>
